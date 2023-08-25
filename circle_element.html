@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Circle with a Scale Transformation */
+        .circle {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            border-radius: 50%;
+            transform: scale(2);
+        }
+
+        /* Arrow Icon with Rotation Transformation */
+        .arrow {
+            width: 0;
+            height: 0;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            border-bottom: 30px solid red;
+            transform: rotate(45deg);
+        }
+
+        /* Square Div with Translation Transformation */
+        .square {
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            transform: translate(50px, 20px);
+        }
+
+        /* Button with Rotation Transformation on Hover */
+        .button {
+            padding: 10px 20px;
+            background-color: orange;
+            border: none;
+            color: white;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .button:hover {
+            transform: rotate(360deg);
+        }
+
+        /* Card Element with Flip Transformation */
+        .card-container {
+            perspective: 1000px;
+            width: 200px;
+            height: 300px;
+            position: relative;
+        }
+
+        .card {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            transform-style: preserve-3d;
+            transition: transform 0.5s;
+        }
+
+        .card.flip {
+            transform: rotateY(180deg);
+        }
+
+        /* Navigation Menu with Links and Scale Transformation on Hover */
+        .nav {
+            list-style: none;
+            display: flex;
+            padding: 0;
+        }
+
+        .nav li {
+            margin-right: 20px;
+        }
+
+        .nav a {
+            color: black;
+            text-decoration: none;
+            transition: transform 0.2s ease;
+        }
+
+        .nav a:hover {
+            transform: scale(1.1);
+        }
+
+        /* Keyframe Animation */
+        @keyframes move-rotate-scale {
+            0% {
+                transform: translate(0, 0) rotate(0) scale(1);
+            }
+            50% {
+                transform: translate(100px, 100px) rotate(180deg) scale(2);
+            }
+            100% {
+                transform: translate(0, 0) rotate(360deg) scale(1);
+            }
+        }
+
+        /* Animated Element */
+        .animated-element {
+            width: 100px;
+            height: 100px;
+            background-color: purple;
+            position: absolute;
+            animation: move-rotate-scale 4s infinite;
+        }
+
+        /* Image Section with Transformation */
+        .image-section {
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image-section img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+    </style>
+    <title>Transformations and Designs</title>
+</head>
+<body>
+    <div class="circle"></div>
+    <div class="arrow"></div>
+    <div class="square"></div>
+    <button class="button">Hover Me</button>
+    <div class="card-container">
+        <div class="card">
+            <div class="front">
+                Front Content
+            </div>
+            <div class="back">
+                Back Content
+            </div>
+        </div>
+    </div>
+    <ul class="nav">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+    <div class="animated-element"></div>
+    <div class="image-section">
+        <img src="image.jpg" alt="Image">
+    </div>
+</body>
+</html>
